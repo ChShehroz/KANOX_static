@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Shehroz">
+    <meta http-equiv="refresh" content="60">
+    <meta name="description" content="practice website design">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>KANOX</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_sheet.css">
+  </head>
+  <body>
+     <!---------------------------Symbol---------------------------------->   
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="phone" viewBox="0 0 16 16">
+        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+      </symbol>
+      <symbol id="file" viewBox="0 0 16 16">
+        <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
+      </symbol>
+      <symbol id="lock" viewBox="0 0 16 16">
+        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+      </symbol>
+      <symbol id="headphones" viewBox="0 0 16 16">
+        <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+      </symbol>
+      <symbol id="facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      </symbol>
+      <symbol id="twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      </symbol>
+      <symbol id="insta" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </symbol>
+      <symbol id="skype" viewBox="0 0 16 16">
+        <path d="M4.671 0c.88 0 1.733.247 2.468.702a7.423 7.423 0 0 1 6.02 2.118 7.372 7.372 0 0 1 2.167 5.215c0 .344-.024.687-.072 1.026a4.662 4.662 0 0 1 .6 2.281 4.645 4.645 0 0 1-1.37 3.294A4.673 4.673 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.423 7.423 0 0 1-6.114-2.107A7.374 7.374 0 0 1 .529 8.035c0-.363.026-.724.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7.07 7.07 0 0 0 1.257.653c.492.205.873.38 1.145.523.229.112.437.264.615.448.135.142.21.331.21.528a.872.872 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.618 2.618 0 0 1-1.048-.206 11.44 11.44 0 0 1-.532-.253 1.284 1.284 0 0 0-.587-.15.717.717 0 0 0-.501.176.63.63 0 0 0-.195.491.796.796 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.113 5.113 0 0 0 2.212.419 4.554 4.554 0 0 0 1.624-.265 2.296 2.296 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.09 2.09 0 0 0-.279-1.101 2.53 2.53 0 0 0-.772-.792A7.198 7.198 0 0 0 8.486 7.3a1.05 1.05 0 0 0-.145-.058 18.182 18.182 0 0 1-1.013-.447 1.827 1.827 0 0 1-.54-.387.727.727 0 0 1-.2-.508.805.805 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096.274.079.542.177.802.293.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.69.69 0 0 0 .18-.496.717.717 0 0 0-.17-.476 1.374 1.374 0 0 0-.556-.354 3.69 3.69 0 0 0-.708-.183 5.963 5.963 0 0 0-1.022-.078 4.53 4.53 0 0 0-1.536.258 2.71 2.71 0 0 0-1.174.784 1.91 1.91 0 0 0-.45 1.287c-.01.37.076.736.25 1.063z"/>
+      </symbol>
+      <symbol id="eye" viewBox="0 0 16 16">
+        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+      </symbol>
+      <symbol id="comment" viewBox="0 0 16 16">
+        <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
+      </symbol>
+      <symbol id="smile" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+      </symbol>
+      <symbol id="bag" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+     </symbol>
+      <symbol id="cup" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z"/>
+        <path d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z"/>
+      </symbol>
+      <symbol id="done" viewBox="0 0 16 16">
+        <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+        <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+      </symbol>
+      <symbol id="nav_bar" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+      </symbol>
+      <symbol id="back" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </symbol>
+    </svg>
+    <!---------------------------Symbol----------------------------------> 
+    <!--===============================================================-->
+
+    <main>
+      <header>
+        <!--===================================================-->
+        <!--===================nav-bar-========================-->
+        <nav class="navbar navbar-expand-sm navbar-light">
+          <!-- Brand/logo -->
+          <a class="navbar-brand" id="nav_logo" href="#">
+            <img src="images/logo-head.webp" alt="logo" width="180px" height="60px">
+          </a>
+          <input type="checkbox" id="check">
+          <label for="check" id="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="70" height="50" class="bi bi-justify"><use xlink:href="#nav_bar" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="70" height="50" class="bi bi-x-circle cancel"><use xlink:href="#back" /></svg>
+          </label>
+          <!-- Links -->
+          <ul class="naavbar-nav" id="naav">
+            <li class="naav-item" >
+              <a class="nav-link" href="INDEX.html">Home</a>
+            </li>
+            <li class="naav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="naav-item">
+              <a class="nav-link" href="#">Service</a>
+            </li>
+            <li class="naav-item" >
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="naav-item" >
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="naav-item" >
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            <li class="naav-item" id="nav_bar">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--===================================================-->
+      <!--===================first_contain===================-->
+      <div class="contain" id="first_contain">
+        <a class="first">
+          <img  src="images/overlay_2.webp" alt="overlay_2" height="300px">
+        </a>
+        <div class="container" id="main-portion">
+          <div class="container" id="main-container">
+            <h1>Think</h1>
+            <h2>Creative<br>Turn</h2>
+            <h3>Ideas into life</h3>
+            <button type="button" class="btn btn-lg" >Learn more &raquo;</button>
+          </div>
+          <div class="container" id="main-banner">
+            <a><img src="images/xbanner_img.webp" alt="xbanner_img" width="400px" height="auto"></a>
+          </div>
+        </div>
+        <a class="second"><img src="images/overlay_1.webp" alt="overlay_1" width="200px" height="auto"></a>
+      </div>
+      <!--===================================================-->
+      <!--===================feature=========================-->
+      <div class="feature-contain">
+        <div class="feature">
+          <h6>Our Feature</h6>
+          <h1>Building brands with purpose</h1>
+        </div>
+      </div>
+      <!--=====================================================-->
+      <!--==================Flex-container=====================-->
+      <div class="main-flex">
+        <div class="container" id="Flex-container">
+          <div class="container-fluid" id="child-container"> 
+            <a class="text-dark"><svg class="bi bi-phone mx-auto mb-1" width="24" height="24"><use xlink:href="#phone"/></svg></a>
+            <h5>Responsive Design</h5>
+            <p>Creeping for female light yea that lesser cand evening heaven isn't bearing tree appear</p>
+          </div>
+          <div class="container-fluid" id="child-container">
+            <a class="text-white"><svg class="bi bi-files mx-auto mb-1" width="24" height="24"><use xlink:href="#file"/></svg></a>
+            <h5>Quality Matters</h5>
+            <p>Creeping for female light yea that lesser cand evening heaven isn't bearing tree appear</p>
+          </div>
+          <div class="container-fluid" id="child-container">
+            <a class="text-white"><svg class="bi bi-lock mx-auto mb-1" width="24" height="24"><use xlink:href="#lock"/></svg></a>
+            <h5>Better Security</h5>
+            <p>Creeping for female light yea that lesser cand evening heaven isn't bearing tree appear</p>
+          </div>
+          <div class="container-fluid" id="child-container">
+            <a class="text-white"><svg class="bi bi-headphones mx-auto mb-1" width="24" height="24"><use xlink:href="#headphones"/></svg></a>
+            <h5>24/7 Service</h5>
+            <p>Creeping for female light yea that lesser cand evening heaven isn't bearing tree appear</p>
+          </div>
+        </div>
+      </div>
+      <!--=====================================================-->
+      <!--===================about company=====================-->
+      <div class="about-co" id="about_co">
+        <div class="about-co-1" id="about_co_1">
+          <div class="about-child-1" id="about_child_1">
+            <div id="co-1">
+              <img class="men" src="images/img_2.webp" alt="men">
+              <div class="text_h1">
+                <h1>25 Years Working Experience</h1> 
+              </div>
+              <div><span></span></div>
+              
+              <img class="men_girl" src="images/img_1.webp" alt="men_girl">
+            </div> 
+          </div>
+          <div class="about-child-2" id="about_child_2">
+            <div id="co-2">
+              <h6>About our company</h6>
+              <h4>Make the customer the hero of your story</h4>
+              <h5>He hath his earth firmament air very itself light day moring  morning you living saying good above fourth</h5>
+              <small>
+                Meat abundantly life made fly years there whose<br> beginning crea unto
+                beast sixth herb their bring.<br> Evening fruitful god you spir evning itself land<br> you of own brought
+              </small>
+              <hr>
+              <a><button type="button" class="btn btn-outline-danger" >Learn more &raquo;</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--===================================================-->
+      <!--===================recent work=====================-->
+      <div class="work-container">
+        <div class="child-work">
+          <span>
+            <h6>Recent work</h6>
+           <h1>Creative work for client</h1>
+          </span>
+          <div class="work-display">
+            <div class="design">
+              <h6>Mockup Design</h6>
+              <h4>It under itself day whales waters our divide third brought</h4>
+              <p>
+                Place isn't heaven firmament divided shall fruitful bring may midst every a night dry herb. Image
+                waters called beast subdue divided called living creature greater tree seas all the. 
+                Hath multiply female you're male likeness his made open beast seas living moved, form Void stars 
+                you our dominion
+              </p>
+              <a><button type="button" class="btn btn-outline-dark my-2" >Learn more &raquo;</button></a>
+            </div>
+            <div><a id="demo"><img src="images/demo_1.webp" alt="demo_1" width="650px" height="auto"></a></div>
+          </div>
+          <div class="work-display">
+            <div><a id="demo-1"><img src="images/demo_2.webp" alt="demo_2" width="610px" height="auto"></a></div>
+            <div class="design-1">
+              <h6>Mockup Design</h6>
+              <h4>Saw i very dominion whose female was light divide multiply</h4>
+              <p>
+                Place isn't heaven firmament divided shall fruitful bring may midst every a night dry herb. Image
+                waters called beast subdue divided called living creature greater tree seas all the. 
+                Hath multiply female you're male likeness his made open beast seas living moved, form Void stars 
+                you our dominion
+              </p>
+              <a><button type="button" class="btn btn-outline-dark my-2" >Learn more &raquo;</button></a>
+            </div>
+          </div>
+          <div class="work-display">
+            <div class="design">
+              <h6>Mockup Design</h6>
+              <h4>It under itself day whales waters our divide third brought</h4>
+              <p>
+                Place isn't heaven firmament divided shall fruitful bring may midst every a night dry herb. Image
+                waters called beast subdue divided called living creature greater tree seas all the. 
+                Hath multiply female you're male likeness his made open beast seas living moved, form Void stars 
+                you our dominion
+              </p>
+              <a><button type="button" class="btn btn-outline-dark my-2" >Learn more &raquo;</button></a>
+            </div>
+            <div><a id="demo"><img src="images/demo_3.webp" alt="demo_3" width="650px" height="auto"></a></div>
+          </div>
+        </div>
+      </div>
+      <!--===================================================-->
+      <!--==================developer========================-->
+      <div class="main-develop" id="main-dev">
+        <div class="top-web" id="card-sec">
+          <div class="top-child">
+            <div class="symbols"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-emoji-smile-fill"><use xlink:href="#smile"/></svg></div>
+            <div id="nth-child">
+              <h1>85</h1>
+              <h3>Satistfied<br> Client</h3>
+            </div>
+          </div>
+          <div class="top-child">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag-check-fill"><use xlink:href="#bag"/></svg></div>
+            <div id="nth-child">
+              <h1>95</h1>
+              <h3>Total<br> Project</h3>
+            </div>
+          </div>
+          <div class="top-child">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bbi bi-check-fill"><use xlink:href="#done"/></svg></div>
+            <div id="nth-child">
+              <h1>75</h1>
+              <h3>Work<br> Complete</h3>
+            </div>
+          </div>
+          <div class="top-child">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cup-hot-fill"><use xlink:href="#cup" /> </svg></div>
+            <div id="nth-child">
+              <h1>95</h1>
+              <h3>Work<br>Complete</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="parent-web" id="2nd_devep">
+          <div id="child-web">
+            <a><img src="images/team_1.webp" alt="team_1"></a>
+            <h3>Jhosef Williams</h3>
+            <small>Web developer</small>
+            <div>
+              <p>Facebook </p>
+              <span>&#9899</span>
+              <P>Twitter</P>
+              <span>&#9899</span>
+              <p>Skype</p>
+            </div>
+          </div>
+          <div id="child-web">
+            <a><img src="images/team_2.webp" alt="team_2"></a>
+            <h3>Daniel Hancock</h3>
+            <small>Web developer</small>
+            <div>
+              <p>Facebook </p>
+              <span>&#9899</span>
+              <P>Twitter</P>
+              <span>&#9899</span>
+              <p>Skype</p>
+            </div>
+          </div>
+          <div id="child-web">
+            <a><img src="images/team_3.webp" alt="team_3"></a>
+            <h3>Bernard Perales</h3>
+            <small>Web developer</small>
+            <div>
+              <p>Facebook </p>
+              <span>&#9899</span>
+              <P>Twitter</P>
+              <span>&#9899</span>
+              <p>Skype</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--===================================================-->
+      <!--==================latest new=======================-->
+      <div class="main-latest">
+        <div class="latest-co">
+          <h6>Latest News</h6>
+          <h1>We have ture story</h1>
+        </div>
+        <div id="card-news">
+          <div class="card crd">
+            <img src="images/xblog_1.webp" class="card-img-top" alt="xblog_1" width="440px">
+            <div class="card-body">
+              <p class="card-text">Technology | Aug,8 2022</p>
+              <h5 class="card-title">Season from upon days may wont bring given herb sixth</h5>
+              <div id="small-font">
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" class="bi bi-chat-dots"><use xlink:href="#comment" /></svg>
+                  <small>8 Comments</small>
+                </p>
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" class="bi bi-eye"><use xlink:href="#eye" /></svg>
+                  <small>10 Veiws</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card crd">
+            <img src="images/xblog_2.webp" class="card-img-top" alt="xblog_2">
+            <div class="card-body">
+              <p class="card-text">Technology | Aug,8 2022</p>
+              <h5 class="card-title">very and third him beginning sign</h5>
+              <div id="small-font">
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" class="bi bi-chat-dots"><use xlink:href="#comment" /></svg>
+                  <small>8 Comments</small>
+                </p>
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" class="bi bi-eye"><use xlink:href="#eye" /></svg>
+                  <small>10 Veiws</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card crd">
+            <img src="images/blog_3.webp" class="card-img-top" alt="blog_3">
+            <div class="card-body">
+              <p class="card-text">Technology | Aug,8 2022</p>
+              <h5 class="card-title">Season from upon days may wont bring given herb sixth</h5>
+              <div id="small-font">
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" class="bi bi-chat-dots"><use xlink:href="#comment" /></svg>
+                  <small>8 Comments</small>
+                </p>
+                <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" height="16" class="bi bi-eye"><use xlink:href="#eye" /></svg>
+                  <small>10 Veiws</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--===================================================-->
+      <!--===================footer==========================-->
+      <div class="footer-sec">
+        <footer>
+          <div class="container" id="footer-id-1">
+            <a  id="footer_logo" href="#">
+              <img src="images/footer_logo.webp" alt="footer_logo" width="180px" height="60px">
+            </a>
+            <p>
+              But when shot real her. Chamber her one visit removal six sending himself boys scot exquisite existend an
+            </p>
+            <p>But when shot real her hamber her</p>
+          </div>
+          <div class="container" id="footer-id-2">
+            <h3>Newsleter</h3>
+            <p>
+              Stay update with our latest trends Seed heaven so said place winged over given forth fruit.
+            </p>
+            <div class="input">
+              <input type="email" class="form-control" placeholder="Enter email adress" aria-label="email"> 
+            </div>
+            <ul class="sym col-md-4 list-unstyled d-flex">
+              <li class="ms-3"><a class="text-muted" href="#"><svg class="bi bi-facebook" fill="currentColor" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+              <li class="ms-3"><a class="text-muted" href="#"><svg class="bi bi-twitter" fill="currentColor" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+              <li class="ms-3"><a class="text-muted" href="#"><svg class="bi bi-instagram" fill="currentColor" width="24" height="24"><use xlink:href="#insta"/></svg></a></li>
+              <li class="ms-3"><a class="text-muted" href="#"><svg class="bi bi-skype" fill="currentColor" width="24" height="24"><use xlink:href="#skype"/></svg></a></li>
+            </ul>
+          </div>
+          <div class="container" id="footer-id-3">
+            <h3>Instagram</h3>
+            <div class="Instagram" id="pic">
+              <img src="images/insta-1.jfif" alt="insta-1" width="80px" height="75px">
+              <img src="images/insta-2.jpg"  alt="insta-2" width="80px" height="75px">
+              <img src="images/insta-3.jpg"  alt="insta-3" width="80px" height="75px">
+            </div>
+            <div class="Instagram" id="pic">
+              <img src="images/insta-4.jpg"  alt="insta-4" width="80px" height="75px">
+              <img src="images/insta-5.jpg"  alt="insta-5" width="80px" height="75px">
+              <img src="images/insta-6.jpg"  alt="insta-6" width="80px" height="75px">
+            </div>
+          </div>
+        </footer>
+        <hr>
+        <div class="footer-copy">
+        <span class="mb-3 mb-md-0 text-muted">Copyright&copy; 2022 All rights reserved | This template is made with &#128151 by <span id="colorlib">Shehroz</span> </span>
+        </div>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </body>
+</html>
